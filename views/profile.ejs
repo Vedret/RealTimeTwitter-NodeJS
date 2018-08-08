@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+    <body>
+
+        <% include partials/nav.js%>
+        <h1>Body moovin , moje ime je <%= data.srNem%></h1>
+
+        <% data.hobies.forEach(function(item){%>
+           <li><%=item%></li> 
+      <%  });%>
+
+    </body>
+</html>
+

@@ -1,0 +1,13 @@
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="/">Twitter</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav navbar-right">
+        {{#if user}}
+        <li><a href="">{{user.name}}</a></li>
+        <li><a href="/logout">LogOut</a></li>
+        {{/if}}
+      </ul>
+     
+</nav>
