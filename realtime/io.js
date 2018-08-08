@@ -4,5 +4,9 @@ module.exports=function(io){
         console.log('Connected');
         let user =socket.request.user;
         console.log(user.name);
-    })
+    
+    socket.on('tweet',(data)=>{
+        console.log(data);
+    });
+});
 }
