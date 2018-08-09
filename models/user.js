@@ -17,10 +17,10 @@ const UserSchema = new Schema({
         tweet:{type: Schema.Types.ObjectId,ref:'Tweet'}
     }],
     following:[{
-        type: Schema.Types.ObjectId,ref:'Tweet'
+        type: Schema.Types.ObjectId,ref:'User'
     }],
     followers:[{
-        type: Schema.Types.ObjectId,ref:'Tweet'
+        type: Schema.Types.ObjectId,ref:'User'
     }]
 });
 
