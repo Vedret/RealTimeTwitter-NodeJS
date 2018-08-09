@@ -16,6 +16,7 @@ const app=express();
 const http=require('http').Server(app);
 const io=require('socket.io')(http);
 const sessionStore= new MongoStore({url:config.database , autoReconnect:true});
+const port=process.env.PORT ||3000;
 mongoose.connect(config.database,{useNewUrlParser: true},(err)=>{
 
     if(err){
@@ -76,7 +77,7 @@ const userRoutes=require('./routes/user');
 app.use(mainRoutes);
 app.use(userRoutes);
 
-http.listen(3030,(err)=>{
+http.listen(port,(err)=>{
     if(err) console.log(err);
-    console.log(`Server Running on port ${3030}`);
+    console.log(`Server Running on port ${port}`);
 });
