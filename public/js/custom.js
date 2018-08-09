@@ -10,9 +10,9 @@ $(function(){
    socket.on('incommingTweet',function(data){
        let html='';
        
-       html +='<div class"media">';
-       html +='<div class"medi-left">';
-       html +='<a href="#"><img class="media-object" src="'+data.user.photo+'" /></a>';
+       html +='<div class="media">';
+       html +='<div class="medi-left">';
+       html +='<a href="/user/'+ data.user._id +'"><img class="media-object" src="'+data.user.photo+'" /></a>';
        html +='</div>';
        html +='<div class="media-body">';
        html +='<h4 class ="media-heading">'+data.user.name+'</h4>';
